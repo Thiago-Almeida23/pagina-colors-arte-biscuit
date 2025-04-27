@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colors Arte Biscuit</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">Colors Arte Biscuit</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Sobre Mim</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/chaveiro01.jpg" alt="Trabalho 1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/enfeite01.jpg" alt="Trabalho 2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/ima01.jpg" alt="Trabalho 3" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div
+        class="content zigzag"
+        onclick="window.location.href='kchaingallery.html'"
+      >
+        <img src="img/chaveiro02.jpg" alt="Arte 1" />
+        <div>
+          <h2>Chaveiros</h2>
+          <p>
+            Feitos à mão com biscuit e carinho, nossos chaveiros são pequenas
+            obras de arte para o dia a dia. Cada peça une durabilidade e
+            ternura, transformando objetos utilitários em lembranças memoráveis.
+            Mais que acessórios, são guardiões de histórias – perfeitos para
+            presentear ou para dar um toque de personalidade às suas chaves.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="content zigzag reverse"
+        onclick="window.location.href='magnetgallery.html'"
+      >
+        <div>
+          <h2>Ímãs</h2>
+          <p>
+            Pequenos no tamanho, grandes no encanto: nossos ímãs artesanais
+            levam um pedacinho de afeto para sua geladeira, home office ou
+            qualquer cantinho que precise de alegria. Moldados em biscuit com
+            detalhes minuciosos, são enfeites que decoram e conquistam corações.
+          </p>
+        </div>
+        <img src="img/ima02.jpg" alt="Arte 2" />
+      </div>
+
+      <div
+        class="content zigzag"
+        onclick="window.location.href='miniaturegallery.html'"
+      >
+        <img src="img/enfeite01.jpg" alt="Arte 3" />
+        <div>
+          <h2>Miniaturas & Enfeites</h2>
+          <p>
+            Criados com riqueza de detalhes e muito capricho, as miniaturas são
+            convites para um mundo encantado. Feitas à mão em biscuit, cada peça
+            traz charme e personalidade, transformando ambientes em cenários
+            cheios de significado – seja na estante, na mesa de centro ou no seu
+            lugar especial.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contato">
+      <p>Entre em contato:</p>
+      <a href="https://wa.me/SEUNUMERO" target="_blank">WhatsApp</a> |
+      <a href="https://instagram.com/colorsartebiscuit" target="_blank">Instagram</a>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+
+      function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo(0, 0);
+      }
+    </script>
+  </body>
+</html>

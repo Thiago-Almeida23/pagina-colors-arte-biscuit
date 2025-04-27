@@ -1,0 +1,132 @@
+/* Carrossel */
+.swiper {
+    width: 100%;
+    height: 500px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Sessão principal */
+.section {
+    padding: 30px 20px; /* Reduzido o padding superior/inferior */
+}
+
+/* Container do zig zag (AGORA MAIS COMPACTO) */
+.content {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 40px; /* Centralizado com margem inferior reduzida */
+    max-width: 900px; /* Largura máxima reduzida (antes era 100%) */
+    padding: 25px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estrutura do conteúdo */
+.zigzag {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px; /* Espaço entre imagem e texto reduzido */
+    width: 100%;
+    cursor: pointer;
+}
+
+.zigzag:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+}
+
+/* Imagens menores e bordas refinadas */
+.zigzag img {
+    width: 250px; /* Reduzido (era 300px) */
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 8px solid transparent; /* Borda mais fina */
+    padding: 10px;
+    border-image: url('https://www.w3schools.com/css/border.png') 30 stretch;
+}
+
+/* Texto mais compacto */
+.zigzag div {
+    flex: 1;
+    min-width: 250px; /* Evita linhas muito longas */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.zigzag h2 {
+    margin: 0;
+    font-size: 1.5rem; /* Título levemente menor */
+}
+
+/* Versão invertida (direita) */
+.zigzag.reverse {
+    justify-content: flex-end;
+}
+
+.zigzag.reverse div {
+    order: -1;
+    text-align: right;
+}
+
+/* Cores de fundo alternadas */
+.content:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.content:nth-child(odd) {
+    background-color: #ffc9e2;
+}
+
+.content:nth-child(odd) h2 {
+    color: #ffffff;
+}
+
+.content:nth-child(even) h2 {
+    color: #ffc9e2;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .content {
+        max-width: 95%; /* Mais estreito em mobile */
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .zigzag, .zigzag.reverse {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .zigzag.reverse div {
+        order: initial;
+        text-align: center;
+    }
+
+    .zigzag img {
+        width: 200px;
+        height: 200px;
+        border: 6px solid transparent;
+        padding: 8px;
+    }
+
+    .zigzag div {
+        align-items: center;
+        text-align: center;
+        min-width: auto;
+    }
+}
+
+/* Melhoria opcional: sombra sutil para profundidade */
+.content {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
